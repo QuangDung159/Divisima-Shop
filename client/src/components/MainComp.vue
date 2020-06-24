@@ -12,8 +12,9 @@
     </header>
     <!-- Header section end -->
 
-    <!-- Hero section -->
-    <ContentComp></ContentComp>
+    <!-- main-content -->
+    <router-view></router-view>
+    <!-- main-content | end -->
 
     <!-- Footer section -->
     <FooterComp></FooterComp>
@@ -24,7 +25,6 @@
 <script>
 import HeaderComp from "./HeaderComp";
 import NavComp from "./NavComp";
-import ContentComp from "./ConentComp";
 import FooterComp from "./FooterComp";
 
 export default {
@@ -32,7 +32,6 @@ export default {
   components: {
     HeaderComp,
     NavComp,
-    ContentComp,
     FooterComp
   }
 };

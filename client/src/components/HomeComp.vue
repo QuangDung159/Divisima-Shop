@@ -26,7 +26,6 @@
         </div>
       </div>
     </section>
-    <!-- Banner section end  -->
   </div>
 </template>
 
@@ -37,7 +36,7 @@ import LastestProductComp from "./LastestProductComp";
 import ProductFilterComp from "./ProductFilterComp";
 
 export default {
-  name: "ContentComp",
+  name: "HomeComp",
   components: {
     BannerComp,
     FeatureComp,
