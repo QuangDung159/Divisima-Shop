@@ -8,10 +8,7 @@ const cors = require('cors');
 
 const config = require("./configs/index");
 
-// const albumRouter = require("./routes/Album");
-// const postRouter = require("./routes/Post");
-// const photoRouter = require("./routes/Photo");
-// const commentRouter = require("./routes/Comment");
+const brandRouter = require("./routers/brand");
 
 // connect to database
 
@@ -20,11 +17,9 @@ app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(cors());
 
-// routes
-// app.use("/album", albumRouter);
-// app.use("/post", postRouter);
-// app.use("/photo", photoRouter);
-// app.use("/comment", commentRouter);
+// routers
+
+app.use("/brand", brandRouter);
 
 // catching error
 app.use((req, res, next) => {
