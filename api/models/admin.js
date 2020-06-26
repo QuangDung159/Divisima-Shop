@@ -1,66 +1,71 @@
 /* jshint indent: 2 */
 const { sequelize, Model, DataTypes } = require("./index");
 
-class Brand extends Model { };
-Brand.init({
-  brandId: {
+class Admin extends Model { };
+Admin.init({
+  adminId: {
     type: DataTypes.INTEGER(10).UNSIGNED,
     allowNull: false,
     primaryKey: true,
     autoIncrement: true,
-    field: 'brand_id'
+    field: 'admin_id'
   },
-  brandName: {
+  adminEmail: {
     type: DataTypes.STRING(255),
     allowNull: false,
-    field: 'brand_name'
+    field: 'admin_email'
   },
-  brandStatus: {
+  adminPassword: {
+    type: DataTypes.STRING(255),
+    allowNull: false,
+    field: 'admin_password'
+  },
+  adminStatus: {
     type: DataTypes.INTEGER(4),
     allowNull: false,
     defaultValue: '1',
-    field: 'brand_status'
+    field: 'admin_status'
   },
-  brandIsDeleted: {
+  adminIdDeleted: {
     type: DataTypes.INTEGER(4),
     allowNull: false,
     defaultValue: '0',
-    field: 'brand_is_deleted'
+    field: 'admin_id_deleted'
   },
-  brandCreatedAt: {
+  adminCreatedAt: {
     type: DataTypes.INTEGER(10).UNSIGNED,
     allowNull: false,
-    field: 'brand_created_at'
+    field: 'admin_created_at'
   },
-  brandCreatedBy: {
+  adminCreatedBy: {
     type: DataTypes.INTEGER(10).UNSIGNED,
     allowNull: false,
     references: {
       model: 'admin',
       key: 'admin_id'
     },
-    field: 'brand_created_by'
+    field: 'admin_created_by'
   },
-  brandUpdatedAt: {
+  adminUpdatedAt: {
     type: DataTypes.INTEGER(10).UNSIGNED,
     allowNull: true,
-    field: 'brand_updated_at'
+    field: 'admin_updated_at'
   },
-  brandUpdatedBy: {
+  adminUpdatedBy: {
     type: DataTypes.INTEGER(10).UNSIGNED,
     allowNull: true,
     references: {
       model: 'admin',
       key: 'admin_id'
     },
-    field: 'brand_updated_by'
+    field: 'admin_updated_by'
   }
 }, {
-  tableName: 'brand',
-  modelName: "brand",
+  tableName: 'admin',
+  modelName: "admin",
   freezeTableName: true,
-  sequelize,
-  timestamps: false
+  timestamps: false,
+  sequelize
 });
 
-module.exports = Brand;
+module.exports = Admin;

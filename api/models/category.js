@@ -1,66 +1,66 @@
 /* jshint indent: 2 */
 const { sequelize, Model, DataTypes } = require("./index");
 
-class Brand extends Model { };
-Brand.init({
-  brandId: {
+class Category extends Model { };
+Category.init({
+  categoryId: {
     type: DataTypes.INTEGER(10).UNSIGNED,
     allowNull: false,
     primaryKey: true,
     autoIncrement: true,
-    field: 'brand_id'
+    field: 'category_id'
   },
-  brandName: {
+  categoryName: {
     type: DataTypes.STRING(255),
     allowNull: false,
-    field: 'brand_name'
+    field: 'category_name'
   },
-  brandStatus: {
+  categoryStatus: {
     type: DataTypes.INTEGER(4),
     allowNull: false,
     defaultValue: '1',
-    field: 'brand_status'
+    field: 'category_status'
   },
-  brandIsDeleted: {
+  categoryIsDeleted: {
     type: DataTypes.INTEGER(4),
     allowNull: false,
     defaultValue: '0',
-    field: 'brand_is_deleted'
+    field: 'category_is_deleted'
   },
-  brandCreatedAt: {
+  categoryCreatedAt: {
     type: DataTypes.INTEGER(10).UNSIGNED,
     allowNull: false,
-    field: 'brand_created_at'
+    field: 'category_created_at'
   },
-  brandCreatedBy: {
+  categoryCreatedBy: {
     type: DataTypes.INTEGER(10).UNSIGNED,
     allowNull: false,
     references: {
       model: 'admin',
       key: 'admin_id'
     },
-    field: 'brand_created_by'
+    field: 'category_created_by'
   },
-  brandUpdatedAt: {
+  categoryUpdatedAt: {
     type: DataTypes.INTEGER(10).UNSIGNED,
     allowNull: true,
-    field: 'brand_updated_at'
+    field: 'category_updated_at'
   },
-  brandUpdatedBy: {
+  categoryUpdatedBy: {
     type: DataTypes.INTEGER(10).UNSIGNED,
     allowNull: true,
     references: {
       model: 'admin',
       key: 'admin_id'
     },
-    field: 'brand_updated_by'
+    field: 'category_updated_by'
   }
 }, {
-  tableName: 'brand',
-  modelName: "brand",
-  freezeTableName: true,
+  tableName: 'category',
   sequelize,
-  timestamps: false
-});
+  modelName: "category",
+  timestamps: false,
+  freezeTableName: true
+})
 
-module.exports = Brand;
+module.exports = Category;
