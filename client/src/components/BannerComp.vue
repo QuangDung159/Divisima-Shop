@@ -6,7 +6,7 @@
           <div class="row">
             <div class="col-xl-6 col-lg-7 text-white">
               <span>New Arrivals</span>
-              <h2>denim jackets</h2>
+              <h2>MV Agusta F3-RC</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus
@@ -28,7 +28,7 @@
           <div class="row">
             <div class="col-xl-6 col-lg-7 text-white">
               <span>New Arrivals</span>
-              <h2>denim jackets</h2>
+              <h2>MV Agusta F3-RC</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus
