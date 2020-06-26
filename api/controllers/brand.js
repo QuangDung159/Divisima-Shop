@@ -1,4 +1,4 @@
-const Brand = require("../models/brand");
+const Model = require("../models/index");
 
 const getAllAvai = (req, res) => {
 }
